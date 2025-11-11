@@ -1,5 +1,5 @@
 
-/*
+/**
 	* @file stats.c
 	* @brief Implementaion of the statistical analysis functions
 */
@@ -7,9 +7,8 @@
 #include <math.h>
 #include "stats.h"
 #include "array_utils.h"
-#include "array_utils.h"
 
-/*
+/**
 	* @brief returns the minimum used element in the array
 */
 
@@ -25,13 +24,13 @@ int getMin(int arr[], int capacity)
 		}
 		if (!found || arr[i] < min) {
 			min = arr[i];
-			found = -1;
+			found = 1;
 		}
 	}
 	return found ? min : -1;
 }
 
-/*
+/**
 	* @brief returns the maximum used element in the array
 */
 
@@ -47,12 +46,12 @@ int getMax(int arr[], int capacity)
 		}
 		if (!found || arr[i] > max) {
 			max = arr[i];
-			found = -1;
+			found = 1;
 		}
 	}
 	return found ? max : -1;
 }
-/*
+/**
 	* @brief calculates the average value of the array
 */
 
@@ -72,7 +71,7 @@ double getAverage(int arr[], int capacity)
 	return (count > 0) ? sum / count : 0.0;
 }
 
-/*
+/**
 	* @brief calculates the median value of the array
 */
 
@@ -112,7 +111,7 @@ double getMedian(int arr[], int capacity)
 	}
 }
 
-/*
+/**
 	* @brief calculates the variance of all the used elements in the array
 */
 
@@ -133,7 +132,7 @@ double getVariance(int arr[], int capacity)
 	return (count > 0) ? sumSq / count : 0.0;
 }
 
-/*
+/**
 	* @brief calculates the standard deviation of all used elements in the array
 */
 
@@ -144,7 +143,7 @@ double getStdDev(int arr[], int capacity)
 	return sqrt(var);
 }
 
-/*
+/**
 	* @brief counts the number of used elements in the array
 */
 

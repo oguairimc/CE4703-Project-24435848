@@ -1,5 +1,5 @@
 
-/*
+/**
 	* @file array_utils.c
 	* @brief implementaion of aray manipulation functions
 	* provides logic for filling, sorting, clearing, and randomizing arrays
@@ -11,7 +11,7 @@
 #include "array_utils.h"
 #include "random_utils.h"
 
-/*
+/**
 	* @brief counts used elements in an array
 	* @param arr: integer array
 	* @param capacity: capacity of the array
@@ -29,7 +29,7 @@ static int count_used_local(const int arr[], int capacity)
 	return count;
 }
 
-/*
+/**
 	* @brief fills the array with integers entered by the user
 */
 
@@ -63,7 +63,7 @@ void fillFromKeyboard(int arr[], int capacity)
 	}
 }
 
-/*
+/**
 	* @brief fills the array with random numbers
 */
 
@@ -84,8 +84,8 @@ void fillRandom(int arr[], int size, int capacity, int min, int max)
 	}
 }
 
-/*
-	* @brief sets values in the array to UNUSED
+/**
+	* @brief sets values in the array to -1
 */
 
 //WF4
@@ -97,7 +97,7 @@ void clearArray(int arr[], int capacity)
 	}
 }
 
-/*
+/**
 	* @brief sorts used elements in ascending order
 */
 
@@ -118,7 +118,7 @@ void sortArray(int arr[], int capacity)
 	}
 }
 
-/*
+/**
 	* @brief randomizes used elements
 */
 

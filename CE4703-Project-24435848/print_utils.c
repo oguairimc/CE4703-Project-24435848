@@ -1,5 +1,5 @@
 
-/*
+/**
 	* @file print_utils.c
 	* @brief implementaion of array printing functions
 */
@@ -8,7 +8,7 @@
 #include "print_utils.h"
 #include "array_utils.h"
 
-/*
+/**
 	* @brief prints only used elements of the array
 */
 
@@ -30,7 +30,7 @@ void printUsed(int arr[], int capacity)
 	printf("}");
 }
 
-/*
+/**
 	* @brief prints all elements of the array
 */
 

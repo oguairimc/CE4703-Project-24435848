@@ -1,5 +1,5 @@
 
-/*
+/**
 	* @file menu.c
 	* @brief Excecutution of MF1, MF2 and MF3
 	* Each function performs a test scenario using the Working Functions as described in the assignment
@@ -17,7 +17,7 @@
 #define MF3_Capacity 100
 
 
-/*
+/**
 	* @brief Performs the actions needed for MF1
 	* Demonstrates generating random numbers, sorting, clearing, and printing arrays
 */
@@ -44,7 +44,7 @@ void performMF1()
 	printf("array (all elements) = ");
 	printAll(arr, MF1_Capacity);  printf("\n");
 
-	fillRandom(arr, 5, MF1_Capacity, 10, 30);
+	fillRandom(arr, 5, MF1_Capacity, 20, 30);
 	sortArray(arr, MF1_Capacity);
 	printf("array (all elements) = ");
 	printAll(arr, MF1_Capacity); printf("\n");
@@ -55,7 +55,7 @@ void performMF1()
 	printf("\n\n");
 }
 
-/*
+/**
 	* @brief Performs the actions needed for MF2
 	* Demonstrates filling an array with random numbers, sorting, randomizing, and displays all elements 
 */
@@ -85,7 +85,7 @@ void performMF2()
 	printAll(arr, capacity); printf("\n");
 }
 
-/*
+/**
 	* @brief Performs actions needed for MF3
 	* Prompts the user to input integers, displays the array of entered numbers, calculates min, max, average, median, variance, and standard deviation
 */

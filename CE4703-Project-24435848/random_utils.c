@@ -1,5 +1,5 @@
 
-/*
+/**
 	* @file random_utils.c
 	* @brief generates random numbers
 */
@@ -9,7 +9,7 @@
 
 //WF1
 
-/*
+/**
 	* @brief returns a random integer between lower and upper parameters (inclusive)
 	* @param lower: the lowest value
 	* @param upper: the highest value

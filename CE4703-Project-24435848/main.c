@@ -1,5 +1,5 @@
 
-/*
+/**
 	* @file main.c
 	* @brief Entry point for Assignment 1
 	* 
