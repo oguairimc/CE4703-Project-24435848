@@ -1,7 +1,7 @@
 
 /**
 	* @file array_utils.h
-	* @brief includes methods for filling arrays from keyboard input or randomly, clearing, sorting, and randomizing integer arrays
+	* contains helper functions to populate, sort, clear, and randomize arrays
 */
 
 #ifndef ARRAY_UTILS_H

@@ -2,7 +2,6 @@
 /**
 	* @file random_utils_h
 	* @brief random number generation
-	* generates random integer values between spcified parameters
 */
 
 #ifndef RANDOM_UTILS_H

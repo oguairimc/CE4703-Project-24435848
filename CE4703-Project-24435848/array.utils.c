@@ -2,7 +2,7 @@
 /**
 	* @file array_utils.c
 	* @brief implementaion of aray manipulation functions
-	* provides logic for filling, sorting, clearing, and randomizing arrays
+	* contains helper functions to populate, sort, clear, and randomize arrays
 */
 
 #include <stdio.h>

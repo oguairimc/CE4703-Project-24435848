@@ -1,7 +1,7 @@
 
 /**
 	* @file stats.c
-	* @brief Implementaion of the statistical analysis functions
+	* @brief statistical operations on integer arrays
 */
 
 #include <math.h>
