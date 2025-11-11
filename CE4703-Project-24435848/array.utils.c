@@ -22,8 +22,9 @@ static int count_used_local(const int arr[], int capacity)
 	int count = 0;
 	for (int i = 0; i < capacity; i++) {
 		if (arr[i] == -1) {
-			count++;
+			break;
 		}
+		count++;
 	}
 	return count;
 }

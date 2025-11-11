@@ -32,7 +32,7 @@ void performMF1()
 	int arr[MF1_Capacity];
 	clearArray(arr, MF1_Capacity);
 
-	fillRandom(arr, MF1_Capacity, MF1_Capacity, 10, 99);
+	fillRandom(arr, 7, MF1_Capacity, 10, 20);
 	printf("array (used only)    = ");
 	printUsed(arr, MF1_Capacity); printf("\n");
 	printf("array (all elements) = ");
@@ -44,7 +44,7 @@ void performMF1()
 	printf("array (all elements) = ");
 	printAll(arr, MF1_Capacity);  printf("\n");
 
-	fillRandom(arr, MF1_Capacity, MF1_Capacity, 10, 99);
+	fillRandom(arr, 5, MF1_Capacity, 10, 30);
 	sortArray(arr, MF1_Capacity);
 	printf("array (all elements) = ");
 	printAll(arr, MF1_Capacity); printf("\n");
@@ -71,8 +71,6 @@ void performMF2()
 	const int min = 10;
 	const int max = 20;
 	int arr[20];
-
-	unsigned int seed = (unsigned int)(time(NULL) ^ clock());
 
 	fillRandom(arr, capacity, capacity, min, max);
 	printf("array with random (all) = ");

@@ -22,7 +22,7 @@ int main()
 {
 	int option = 0;
 
-	srand((unsigned int)time(NULL));
+	srand((unsigned int)time(NULL) ^ clock());
 
 	do {
 		printf("\n\n1) Perform MF1\n");
