@@ -67,22 +67,21 @@ void performMF2()
 	printf("\n\n");
 	printf("Perform MF2:\n");
 
-	const int capacity = 20;
 	const int min = 10;
 	const int max = 20;
 	int arr[20];
 
-	fillRandom(arr, capacity, capacity, min, max);
+	fillRandom(arr, MF2_Used, MF2_Capacity, min, max);
 	printf("array with random (all) = ");
-	printAll(arr, capacity); printf("\n");
+	printAll(arr, MF2_Capacity); printf("\n");
 
-	sortArray(arr, capacity);
+	sortArray(arr, MF2_Capacity);
 	printf("sorted array (all)      = ");
-	printAll(arr, capacity); printf("\n");
+	printAll(arr, MF2_Capacity); printf("\n");
 
-	randomizeArray(arr, capacity);
+	randomizeArray(arr, MF2_Capacity);
 	printf("randomized array(all)   = ");
-	printAll(arr, capacity); printf("\n");
+	printAll(arr, MF2_Capacity); printf("\n");
 }
 
 /**

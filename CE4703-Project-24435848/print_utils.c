@@ -19,7 +19,7 @@ void printUsed(int arr[], int capacity)
 	int printed = 0;
 	printf("{");
 	for (i = 0; i < capacity; ++i) {
-		if (arr[i] == -1) {
+		if (arr[i] == UNUSED) {
 			break;
 		}
 		if (printed++) {

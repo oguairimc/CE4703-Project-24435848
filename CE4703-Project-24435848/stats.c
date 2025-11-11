@@ -19,7 +19,7 @@ int getMin(int arr[], int capacity)
 	int min = 0;
 
 	for (int i = 0; i < capacity; ++i) {
-		if (arr[i] == -1) {
+		if (arr[i] == UNUSED) {
 			break;
 		}
 		if (!found || arr[i] < min) {
@@ -27,7 +27,7 @@ int getMin(int arr[], int capacity)
 			found = 1;
 		}
 	}
-	return found ? min : -1;
+	return found ? min : UNUSED;
 }
 
 /**
@@ -41,7 +41,7 @@ int getMax(int arr[], int capacity)
 	int max = 0;
 
 	for (int i = 0; i < capacity; ++i) {
-		if (arr[i] == -1) {
+		if (arr[i] == UNUSED) {
 			break;
 		}
 		if (!found || arr[i] > max) {
@@ -49,7 +49,7 @@ int getMax(int arr[], int capacity)
 			found = 1;
 		}
 	}
-	return found ? max : -1;
+	return found ? max : UNUSED;
 }
 /**
 	* @brief calculates the average value of the array
@@ -62,7 +62,7 @@ double getAverage(int arr[], int capacity)
 	int count = 0;
 
 	for (int i = 0; i < capacity; ++i) {
-		if (arr[i] == -1) {
+		if (arr[i] == UNUSED) {
 			break;
 		}
 		sum += arr[i];
@@ -81,7 +81,7 @@ double getMedian(int arr[], int capacity)
 	int used = 0;
 
 	for (int i = 0; i < capacity; ++i) {
-		if (arr[i] == -1) {
+		if (arr[i] == UNUSED) {
 			break;
 		}
 		used++;
@@ -123,7 +123,7 @@ double getVariance(int arr[], int capacity)
 	int count = 0;
 
 	for (int i = 0; i < capacity; ++i) {
-		if (arr[i] == -1) {
+		if (arr[i] == UNUSED) {
 			break;
 		}
 		sumSq += (arr[i] - avg) * (arr[i] - avg);
@@ -152,7 +152,7 @@ int countUsed(int arr[], int capacity)
 {
 	int i;
 	for (i = 0; i < capacity; i++) {
-		if (arr[i] == -1) {
+		if (arr[i] == UNUSED) {
 			break;
 		}
 	}

@@ -21,7 +21,7 @@ static int count_used_local(const int arr[], int capacity)
 {
 	int count = 0;
 	for (int i = 0; i < capacity; i++) {
-		if (arr[i] == -1) {
+		if (arr[i] == UNUSED) {
 			break;
 		}
 		count++;
@@ -59,7 +59,7 @@ void fillFromKeyboard(int arr[], int capacity)
 	}
 
 	for (; i < capacity; i++) {
-		arr[i] = -1;
+		arr[i] = UNUSED;
 	}
 }
 
@@ -80,12 +80,12 @@ void fillRandom(int arr[], int size, int capacity, int min, int max)
 	}
 
 	for (; i < capacity; i++) {
-		arr[i] = -1;
+		arr[i] = UNUSED;
 	}
 }
 
 /**
-	* @brief sets values in the array to -1
+	* @brief sets values in the array to UNUSED
 */
 
 //WF4
@@ -93,7 +93,7 @@ void clearArray(int arr[], int capacity)
 {
 	int i;
 	for (i = 0; i < capacity; i++) {
-		arr[i] = -1;
+		arr[i] = UNUSED;
 	}
 }
 
