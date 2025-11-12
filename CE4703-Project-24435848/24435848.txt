@@ -19,14 +19,162 @@ The design makes use of modular programming principles, uses Doxygen commenting 
 
 
 
-PROGRAM STRUCTURE:
+LIST OF MODULES:
 
 1) random_utils.c / random_utils.h
 Provides random number generation used throught the program 
-	* WF1_getRandom
+	* WF1_getRandom()
 
 2) array_utils.c / array_utils.h
 Contains functions to fill, clear, sort, and randomize integer arrays
-	* 
+	* countUsed()
+	* WF2_fillFromKeyboard()
+	* WF3_fillRandom()
+	* WF4_clearArray()
+	* WF5_sortArray()
+	* WF6_randomizeArray()
 
 3) print_utils.c / print_utils.h
+Provides formatted printing of arrays
+	* WF7_printUsed()
+	* WF8_printAll()
+
+4) stats.c / stats.h
+Performs statistical calculations on integer arrays
+	* WF9_getMin()
+	* WF10_getMax()
+	* WF11_getAverage()
+	* WF12_getMedian()
+	* WF13_getVariance()
+	* WF14_getStdDev()
+	* WF15_countUsed()
+
+5) menu.c / menu.h
+Demonstrates the working functions through MF1, MF2, MF3
+	* performMF1()
+	* performMF2()
+	* performMF3()
+
+6) main.c
+Entry point for the application, manages menu selection
+	* main()
+
+Each module is fully independent and communications only through public function calls
+All arrays are passed as parameters. No global variable are used.
+
+
+
+PREPROCCESSOR DIRECTIVES:
+
+The following preprocessor directives are used:
+
+* Include Guards
+Every header file ised #ifndef, #define, and #endif to prevent multiple inclusions
+
+* Simple Macro
+#define UNUSED (-1) is used to mark unused array elements
+
+* Parameterized Macro:
+#define SWAP(a,b) do {int tmp = (a); (a) = (b); (b) = tmp;} while (0) is used to swap two integer values during sorting or randomization
+
+These demonstrate both types if macros as required in the assignment sheet
+
+
+
+
+LIST AND SPECIFICATION OF FUNCTIONS PER MODULE:
+
+* random_utils.c / random_utils.h
+
+The purpose of random_utils is to generate random number generation (WF1) used for filling arrays in array_utils.c
+
+int WF1_getRandom(int lower, int upper);
+
+* returns a random integer between lower and upper (inclusive)
+* uses the C library rand() function
+* srand() is called once in main() to seed the random generator
+
+
+* array_utils.c / array_utils.h
+
+The purpose of array_utils is to manipulate arrays used throughout the program (WF2-WF6)
+
+WF2_fillFromKeyboard(int arr[], int capacity)
+prompts the user to input integers until either the array is full or a negative number is entered. The rest of the array is filled with the sentinal UNUSED
+
+WF3_fillRandom(int arr[], int size, int capacity, int min, int max) 
+fills the array with size random integers in the range [min, max] and fills remaining elements with UNUSED
+
+WF4_clearArray(int arr[], int capacity)
+sets all elements in the array to UNUSED
+
+WF5_sortArray(int arr[], int capacity)
+sorts all used elements of the array in ascending order 
+
+WF6_randomizeArray(int arr[], int capacity)
+randomizes order of used elements 
+
+
+* print_utils.c / print_utils.h
+the purpose of print_utils is to display the arrays
+
+WF7_printUsed(int arr[], int capacity)
+prints only the used elements of the array (stops at the first UNUSED)
+
+WF8_printAll(int arr[], int capacity)
+prints all elements in the array, including UNUSED elements
+
+
+* stats.c / stats.h
+the purpose of stats is to perform statistical operations on arrays
+
+WF9_getMin(int arr[], int capacity)
+returns the smallest element in the array
+
+WF10_getMax(int arr[], int capacity)
+returns the largest element in the array
+
+WF11_getAverage(int arr[], int capacity)
+calaculates the average of the elements in the array
+
+WF12_getMedian(int arr[], int capacity)
+creates a temporary copy of the used portion of the array, sorts it, and returns the median value
+
+WF13_getVariance(int arr[], int capacity)
+calculates the variance of the array by adding the squared difference between each element and the average
+
+WF14_getStdDev(int arr[], int capacity)
+computes the standard deviation as the square root of the variance
+
+WF15_countUsed(int arr[], int capacity)
+returns the count of the used elements before the first UNUSED
+
+
+* menu.c / menu.h
+the purpose of menu is to implement the 3 Menu Functions which demonstrate the programs functionality
+
+performMF1()
+	* clears an array of 10 elements
+	* fills it with 7 random value
+	* prints the used and full arrays
+	* clears it again and prints
+	* fills it again with 5 random values, sorts and prints it
+	* displays the minimum and maximum values
+
+performMF2()
+	* fills a 20 elements array with 15 randoms numbers (the sample output given had 20/20 elements in the array but the assignment sheet says to fill 15/20 so i did that)
+	* prints, sorts, and prints again
+	* randomizes and prints a third time
+	
+performMF3()
+	* prompts user to enter positive integers
+	* displays the array once input is complete
+	* calculates and displays minimum, maximum, average, median, variance, and standard deviation
+
+
+
+* main.c
+the purpose of main is to implement a loop-driver text menu allowing the user to select MF1, MF2, MF3
+it runs until option 4 is selected
+
+
