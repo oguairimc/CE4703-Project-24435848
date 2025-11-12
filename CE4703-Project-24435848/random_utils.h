@@ -19,7 +19,7 @@ extern "C" {
 		* @return a random integer in the range [lower, upper]
 		* @note Call srand(time(NULL)) once in main() before using this function
 	*/
-	int getRandom(int lower, int upper);
+	int WF1_getRandom(int lower, int upper);
 
 #ifdef __cplusplus
 }

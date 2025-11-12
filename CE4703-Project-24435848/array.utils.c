@@ -17,7 +17,7 @@
 	* @param capacity: capacity of the array
 	* @return Number of used elements
 */
-static int count_used_local(const int arr[], int capacity)
+static int count_used(const int arr[], int capacity)
 {
 	int count = 0;
 	for (int i = 0; i < capacity; i++) {
@@ -33,8 +33,8 @@ static int count_used_local(const int arr[], int capacity)
 	* @brief fills the array with integers entered by the user
 */
 
-//WF2
-void fillFromKeyboard(int arr[], int capacity)
+
+void WF2_fillFromKeyboard(int arr[], int capacity)
 {
 	int i, value;
 	if (capacity <= 0) {
@@ -67,8 +67,8 @@ void fillFromKeyboard(int arr[], int capacity)
 	* @brief fills the array with random numbers
 */
 
-//WF3
-void fillRandom(int arr[], int size, int capacity, int min, int max)
+
+void WF3_fillRandom(int arr[], int size, int capacity, int min, int max)
 {
 	int i;
 	if (capacity <= 0) {
@@ -76,7 +76,7 @@ void fillRandom(int arr[], int size, int capacity, int min, int max)
 	}
 
 	for (i = 0; i < size && i < capacity; i++) {
-		arr[i] = getRandom(min, max);
+		arr[i] = WF1_getRandom(min, max);
 	}
 
 	for (; i < capacity; i++) {
@@ -88,8 +88,8 @@ void fillRandom(int arr[], int size, int capacity, int min, int max)
 	* @brief sets values in the array to UNUSED
 */
 
-//WF4
-void clearArray(int arr[], int capacity)
+
+void WF4_clearArray(int arr[], int capacity)
 {
 	int i;
 	for (i = 0; i < capacity; i++) {
@@ -101,10 +101,10 @@ void clearArray(int arr[], int capacity)
 	* @brief sorts used elements in ascending order
 */
 
-//WF5
-void sortArray(int arr[], int capacity)
+
+void WF5_sortArray(int arr[], int capacity)
 {
-	int used = count_used_local(arr, capacity);
+	int used = count_used(arr, capacity);
 	int i, j;
 
 	for (i = 0; i < used - 1; ++i) {
@@ -122,14 +122,14 @@ void sortArray(int arr[], int capacity)
 	* @brief randomizes used elements
 */
 
-//WF6
-void randomizeArray(int arr[], int capacity)
+
+void WF6_randomizeArray(int arr[], int capacity)
 {
-	int used = count_used_local(arr, capacity);
+	int used = count_used(arr, capacity);
 	int i, j;
 
 	for (i = used - 1; i > 0; --i) {
-		j = getRandom(0, i);
+		j = WF1_getRandom(0, i);
 		if (j != i) {
 			SWAP(arr[i], arr[j]);
 		}

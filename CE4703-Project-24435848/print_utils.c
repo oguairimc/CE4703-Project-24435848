@@ -12,8 +12,8 @@
 	* @brief prints only used elements of the array
 */
 
-//WF7
-void printUsed(int arr[], int capacity)
+
+void WF7_printUsed(int arr[], int capacity)
 {
 	int i;
 	int printed = 0;
@@ -34,8 +34,8 @@ void printUsed(int arr[], int capacity)
 	* @brief prints all elements of the array
 */
 
-//WF8
-void printAll(int arr[], int capacity)
+
+void WF8_printAll(int arr[], int capacity)
 {
 	int i;
 	printf("{");

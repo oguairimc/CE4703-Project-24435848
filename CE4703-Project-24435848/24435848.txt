@@ -1,0 +1,32 @@
+
+Student Name: Colm O Guairim
+Student ID: 24435848
+Date: 12/11/2025
+Module: CE4703
+
+
+INTRO:
+
+The aim of this assignment was to design and implement a modular C program that demonstrates the use of arrays, modular design, preprocessor directives and statistics.
+The program performs the following:
+	* Generates and manipulates arrays using random or user-inputted values
+	* Sorts, clears, and randomizes arrays
+	* Calculates statistical values such as minimum, maximum, average, median, variance, and standard deviation
+	* Displays results through a menu that continuously executes until the user exits.
+The projects consists of C modules with .c and .h pairs, using 15 Working Functions (WF) and 3 Menu Functions (MF). 
+The main program ties these modules together through a user interface implemented in main.c
+The design makes use of modular programming principles, uses Doxygen commenting to document automatically, and uses preprocessor macros for sentinal value and code reuse
+
+
+
+PROGRAM STRUCTURE:
+
+1) random_utils.c / random_utils.h
+Provides random number generation used throught the program 
+	* WF1_getRandom
+
+2) array_utils.c / array_utils.h
+Contains functions to fill, clear, sort, and randomize integer arrays
+	* 
+
+3) print_utils.c / print_utils.h

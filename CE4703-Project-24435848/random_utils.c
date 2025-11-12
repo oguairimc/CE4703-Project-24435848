@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include "random_utils.h"
 
-//WF1
+
 
 /**
 	* @brief returns a random integer between lower and upper parameters (inclusive)
@@ -16,7 +16,7 @@
 	* @return a random integer in the range [lower, upper]
 */
 
-int getRandom(int lower, int upper)
+int WF1_getRandom(int lower, int upper)
 {
 	return rand() % (upper - lower + 1) + lower;
 }

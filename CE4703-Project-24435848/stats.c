@@ -12,8 +12,8 @@
 	* @brief returns the minimum used element in the array
 */
 
-//WF9
-int getMin(int arr[], int capacity)
+
+int WF9_getMin(int arr[], int capacity)
 {
 	int found = 0;
 	int min = 0;
@@ -34,8 +34,8 @@ int getMin(int arr[], int capacity)
 	* @brief returns the maximum used element in the array
 */
 
-//WF10
-int getMax(int arr[], int capacity)
+
+int WF10_getMax(int arr[], int capacity)
 {
 	int found = 0;
 	int max = 0;
@@ -55,8 +55,8 @@ int getMax(int arr[], int capacity)
 	* @brief calculates the average value of the array
 */
 
-//WF11
-double getAverage(int arr[], int capacity)
+
+double WF11_getAverage(int arr[], int capacity)
 {
 	double sum = 0.0;
 	int count = 0;
@@ -75,8 +75,8 @@ double getAverage(int arr[], int capacity)
 	* @brief calculates the median value of the array
 */
 
-//WF12
-double getMedian(int arr[], int capacity)
+
+double WF12_getMedian(int arr[], int capacity)
 {
 	int used = 0;
 
@@ -115,10 +115,10 @@ double getMedian(int arr[], int capacity)
 	* @brief calculates the variance of all the used elements in the array
 */
 
-//WF13
-double getVariance(int arr[], int capacity)
+
+double WF13_getVariance(int arr[], int capacity)
 {
-	double avg = getAverage(arr, capacity);
+	double avg = WF11_getAverage(arr, capacity);
 	double sumSq = 0.0;
 	int count = 0;
 
@@ -136,10 +136,10 @@ double getVariance(int arr[], int capacity)
 	* @brief calculates the standard deviation of all used elements in the array
 */
 
-//WF14
-double getStdDev(int arr[], int capacity)
+
+double WF14_getStdDev(int arr[], int capacity)
 {
-	double var = getVariance(arr, capacity);
+	double var = WF13_getVariance(arr, capacity);
 	return sqrt(var);
 }
 
@@ -147,8 +147,8 @@ double getStdDev(int arr[], int capacity)
 	* @brief counts the number of used elements in the array
 */
 
-//WF15
-int countUsed(int arr[], int capacity)
+
+int WF15_countUsed(int arr[], int capacity)
 {
 	int i;
 	for (i = 0; i < capacity; i++) {

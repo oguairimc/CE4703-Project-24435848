@@ -16,14 +16,14 @@ extern "C" {
 		* @param arr: array of integers
 		* @param capacity: capacity of the array
 	*/
-	void printUsed(int arr[], int capacity);
+	void WF7_printUsed(int arr[], int capacity);
 
 	/**
 		* @brief prints all elements of the array 
 		* @param arr: array of integers
 		* @param capacity: capacity of the array
 	*/
-	void printAll(int arr[], int capacity);
+	void WF8_printAll(int arr[], int capacity);
 
 #ifdef __cplusplus
 }

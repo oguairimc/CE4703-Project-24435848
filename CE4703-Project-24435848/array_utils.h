@@ -23,7 +23,7 @@ extern "C" {
 		* @param arr: the array to fill
 		* @param capacity: max number of elements that can be stored
 	*/
-	void fillFromKeyboard(int arr[], int capacity);
+	void WF2_fillFromKeyboard(int arr[], int capacity);
 
 	/**
 		* @brief fills an array with random integers
@@ -33,14 +33,14 @@ extern "C" {
 		* @param min: minimum random value
 		* @param max: maximum random value
 	*/
-	void fillRandom(int arr[], int size, int capacity, int min, int max);
+	void WF3_fillRandom(int arr[], int size, int capacity, int min, int max);
 
 	/**
 		* @brief marks all the elements as UNUSED
 		* @param arr: the array to clear
 		* @param capacity: capacity of the array
 	*/
-	void clearArray(int arr[], int capacity);
+	void WF4_clearArray(int arr[], int capacity);
 
 	/**
 		* @brief sorts used elements in array in ascending order
@@ -48,7 +48,7 @@ extern "C" {
 		* @param arr: the array to sort
 		* @param capacity: capacity of the array
 	*/
-	void sortArray(int arr[], int capacity);
+	void WF5_sortArray(int arr[], int capacity);
 
 	/**
 		* @brief randomizes the elements of the array
@@ -56,7 +56,7 @@ extern "C" {
 		* @param arr: the array to randomize
 		* @param capacity: capacity of the array
 	*/
-	void randomizeArray(int arr[], int capacity);
+	void WF6_randomizeArray(int arr[], int capacity);
 
 #ifdef __cplusplus
 }

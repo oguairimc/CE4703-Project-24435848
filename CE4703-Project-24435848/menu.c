@@ -30,27 +30,27 @@ void performMF1()
 	printf("Perform MF1:\n");
 
 	int arr[MF1_Capacity];
-	clearArray(arr, MF1_Capacity);
+	WF4_clearArray(arr, MF1_Capacity);
 
-	fillRandom(arr, 7, MF1_Capacity, 10, 20);
+	WF3_fillRandom(arr, 7, MF1_Capacity, 10, 20);
 	printf("array (used only)    = ");
-	printUsed(arr, MF1_Capacity); printf("\n");
+	WF7_printUsed(arr, MF1_Capacity); printf("\n");
 	printf("array (all elements) = ");
-	printAll(arr, MF1_Capacity);  printf("\n");
+	WF8_printAll(arr, MF1_Capacity);  printf("\n");
 
-	clearArray(arr, MF1_Capacity);
+	WF4_clearArray(arr, MF1_Capacity);
 	printf("array (used only)    = ");
-	printUsed(arr, MF1_Capacity); printf("\n");
+	WF7_printUsed(arr, MF1_Capacity); printf("\n");
 	printf("array (all elements) = ");
-	printAll(arr, MF1_Capacity);  printf("\n");
+	WF8_printAll(arr, MF1_Capacity);  printf("\n");
 
-	fillRandom(arr, 5, MF1_Capacity, 20, 30);
-	sortArray(arr, MF1_Capacity);
+	WF3_fillRandom(arr, 5, MF1_Capacity, 20, 30);
+	WF5_sortArray(arr, MF1_Capacity);
 	printf("array (all elements) = ");
-	printAll(arr, MF1_Capacity); printf("\n");
+	WF8_printAll(arr, MF1_Capacity); printf("\n");
 
-	printf("Minimum: %d\n", getMin(arr, 10));
-	printf("Maximum: %d\n", getMax(arr, 10));
+	printf("Minimum: %d\n", WF9_getMin(arr, 10));
+	printf("Maximum: %d\n", WF10_getMax(arr, 10));
 
 	printf("\n\n");
 }
@@ -71,17 +71,17 @@ void performMF2()
 	const int max = 20;
 	int arr[20];
 
-	fillRandom(arr, MF2_Used, MF2_Capacity, min, max);
+	WF3_fillRandom(arr, MF2_Used, MF2_Capacity, min, max);
 	printf("array with random (all) = ");
-	printAll(arr, MF2_Capacity); printf("\n");
+	WF8_printAll(arr, MF2_Capacity); printf("\n");
 
-	sortArray(arr, MF2_Capacity);
+	WF5_sortArray(arr, MF2_Capacity);
 	printf("sorted array (all)      = ");
-	printAll(arr, MF2_Capacity); printf("\n");
+	WF8_printAll(arr, MF2_Capacity); printf("\n");
 
-	randomizeArray(arr, MF2_Capacity);
+	WF6_randomizeArray(arr, MF2_Capacity);
 	printf("randomized array(all)   = ");
-	printAll(arr, MF2_Capacity); printf("\n");
+	WF8_printAll(arr, MF2_Capacity); printf("\n");
 }
 
 /**
@@ -98,25 +98,25 @@ void performMF3()
 
 	int arr[MF3_Capacity];
 
-	clearArray(arr, MF3_Capacity);
+	WF4_clearArray(arr, MF3_Capacity);
 
-	fillFromKeyboard(arr, MF3_Capacity);
+	WF2_fillFromKeyboard(arr, MF3_Capacity);
 	printf("\n");
 
 	printf("Array = ");
-	printUsed(arr, MF3_Capacity);
+	WF7_printUsed(arr, MF3_Capacity);
 	printf("\n");
 
-	printf("Minimum: %d\n", getMin(arr, MF3_Capacity));
-	printf("Maximum: %d\n", getMax(arr, MF3_Capacity));
+	printf("Minimum: %d\n", WF9_getMin(arr, MF3_Capacity));
+	printf("Maximum: %d\n", WF10_getMax(arr, MF3_Capacity));
 
-	double avg = getAverage(arr, MF3_Capacity);
-	double median = getMedian(arr, MF3_Capacity);
+	double avg = WF11_getAverage(arr, MF3_Capacity);
+	double median = WF12_getMedian(arr, MF3_Capacity);
 	printf("Array has average value %.2f and median value %.2f\n", avg, median);
 
-	int used = countUsed(arr, MF3_Capacity);
-	double variance = getVariance(arr, MF3_Capacity);
-	double stddev = getStdDev(arr, MF3_Capacity);
+	int used = WF15_countUsed(arr, MF3_Capacity);
+	double variance = WF13_getVariance(arr, MF3_Capacity);
+	double stddev = WF14_getStdDev(arr, MF3_Capacity);
 	printf("Array with %d used elements has variance %.2f and standard deviation %.2f\n", used, variance, stddev);
 	printf("\n\n");
 }
